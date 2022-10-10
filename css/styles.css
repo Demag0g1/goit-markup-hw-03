@@ -68,8 +68,7 @@ ul {
 }
 
 .section {
-  font-size: 14px;
-  line-height: 1.71;
+  padding: 94px 0px;
 }
 
 .main-nav {
@@ -94,7 +93,7 @@ ul {
   margin-left: 93px;
 }
 
-.site-nav .item + .item {
+.site-nav .item+.item {
   margin-left: 50px;
 }
 
@@ -115,8 +114,7 @@ ul {
 
 .contacts {
   display: flex;
-  /* margin-left: auto; */
-  margin-left: 344px;
+  margin-left: auto;
 }
 
 .current {
@@ -132,7 +130,7 @@ ul {
   letter-spacing: 0.02em;
 }
 
-.contacts .item + .item {
+.contacts .item+.item {
   margin-left: 50px;
 }
 
@@ -156,7 +154,7 @@ footer {
   line-height: 1.36;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .btn {
@@ -166,6 +164,7 @@ footer {
   background-color: var(--accent-color);
   color: var(--bg-color);
   border-color: var(--accent-color);
+  box-shadow: 0px 4px 4px #00000026;
   box-sizing: border-box;
   font-weight: 700;
   font-size: 16px;
@@ -194,9 +193,7 @@ footer {
 }
 
 .about-title {
-  margin-top: 94px;
   margin-bottom: 10px;
-
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -204,14 +201,17 @@ footer {
 }
 
 .about-text {
-  padding-bottom: 94px;
   width: 270px;
   line-height: 1.71;
   color: var(--text-color);
 }
 
+.section.develop {
+  padding-top: 0;
+}
+
 .section-title {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   color: var(--nav-color);
   font-size: 36px;
   line-height: 1.17;
@@ -220,7 +220,6 @@ footer {
 
 .title.item {
   display: flex;
-  justify-content: center;
 }
 
 .title-img {
@@ -241,8 +240,6 @@ footer {
 
 .command {
   background-color: #f5f4fa;
-  margin-top: 94px;
-  padding-top: 94px;
 }
 
 .team.item {
@@ -251,11 +248,15 @@ footer {
 
 .command-img {
   margin-right: 30px;
-  margin-bottom: 94px;
+}
+
+.team-about {
+  padding: 30px 0;
+  background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.141),
-    0px 2px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px #00000033, 0px 1px 1px #00000024,
+    0px 2px 1px #0000001f;
   text-align: center;
 }
 
@@ -264,7 +265,7 @@ footer {
 }
 
 .team-title {
-  padding-top: 30px;
+  margin-bottom: 10px;
   color: var(--nav-color);
   font-weight: 500;
   font-size: 16px;
@@ -272,14 +273,12 @@ footer {
 }
 
 .team-position {
-  padding-top: 10px;
-  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   color: var(--text-color);
 }
 
-.conteiner.footer {
+.footer {
   padding: 60px 0px;
 }
 
@@ -288,11 +287,11 @@ footer {
 }
 
 .footer-addres {
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .footer-contacts {
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
 .contacts a:hover,
@@ -323,39 +322,37 @@ footer {
 
 .filter {
   display: flex;
-  padding-top: 94px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
-.filter.portfolio-btn {
+.btn.master,
+.btn.slave {
+  min-width: 38px;
+  padding: 6px 22px;
   font-family: inherit;
-  color: var(--nav-color);
-}
-
-.portfolio-btn {
+  border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
-}
-
-.btn {
-  border-radius: 4px;
-  border: transparent;
-  margin-right: 8px;
-  padding: 6px 22px;
-  color: var(--nav-color);
   background-color: var(--btn-bg-color);
+  color: var(--logo-color);
+  border-color: transparent;
 }
 
-.btn.first {
+.btn.master {
   padding: 6px 25px;
 }
 
-.filter button:hover,
-.filter button:focus {
-  cursor: pointer;
+.btn.slave {
+  margin-left: 8px;
+}
+
+.btn.master:hover,
+.btn.master:focus,
+.btn.slave:focus,
+.btn.slave:hover {
   background-color: var(--accent-color);
   color: var(--bg-color);
 }
@@ -363,13 +360,11 @@ footer {
 .project {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 94px;
 }
 
 .project-img {
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid var(--border-color);
 }
 
 .project-img:nth-child(3n) {
@@ -380,10 +375,13 @@ footer {
   margin-bottom: 0;
 }
 
-.portfolio-title {
-  padding: 20px 24px 2px 24px;
+.about-project {
+  padding: 20px 24px;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
-.project-text {
-  padding: 2px 24px 20px 24px;
+.portfolio-title {
+  margin-bottom: 4px;
 }
