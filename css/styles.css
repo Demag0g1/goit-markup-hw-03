@@ -65,7 +65,7 @@ ul {
 
 .header {
   border: 1px solid var(--border-color);
-  display: flex;
+  /* display: flex; */
 }
 
 .section {
@@ -91,8 +91,13 @@ ul {
   line-height: 1.19;
 }
 
-.web-logo {
+.web-logo,
+.footer-studio {
   color: var(--accent-color);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
 }
 
 .site-nav {
@@ -105,8 +110,7 @@ ul {
 }
 
 .site-nav-link {
-  padding: 32px 0;
-
+  display: block;
   color: var(--nav-color);
   font-weight: 500;
   line-height: 1.14;
@@ -297,6 +301,10 @@ h1 {
 
 .footer-studio {
   color: var(--bg-color);
+  /* font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em; */
 }
 
 .adr {
